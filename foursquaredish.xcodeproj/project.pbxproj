@@ -14,6 +14,7 @@
 		4EC256C02372286A0010A8D9 /* foursquaredishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC256BF2372286A0010A8D9 /* foursquaredishTests.swift */; };
 		4EC256D223722B420010A8D9 /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC256D123722B420010A8D9 /* SearchTabViewController.swift */; };
 		4EC256D423722B560010A8D9 /* CollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC256D323722B560010A8D9 /* CollectionsViewController.swift */; };
+		4EC256D9237238130010A8D9 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC256D8237238130010A8D9 /* Secrets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4EC256C12372286A0010A8D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EC256D123722B420010A8D9 /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
 		4EC256D323722B560010A8D9 /* CollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
+		4EC256D8237238130010A8D9 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				4EC256CE23722AC70010A8D9 /* Models */,
 				4EC256CF23722AD90010A8D9 /* NetworkHelpers */,
 				4EC256D023722B070010A8D9 /* Persistance */,
+				4EC256D7237237FB0010A8D9 /* Secrets */,
 				4EC256CA237228FA0010A8D9 /* supportingFiles */,
 				4EC256B62372286A0010A8D9 /* Info.plist */,
 			);
@@ -145,6 +148,14 @@
 			children = (
 			);
 			path = Persistance;
+			sourceTree = "<group>";
+		};
+		4EC256D7237237FB0010A8D9 /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				4EC256D8237238130010A8D9 /* Secrets.swift */,
+			);
+			name = Secrets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EC256D223722B420010A8D9 /* SearchTabViewController.swift in Sources */,
+				4EC256D9237238130010A8D9 /* Secrets.swift in Sources */,
 				4EC256AD237228690010A8D9 /* ViewController.swift in Sources */,
 				4EC256D423722B560010A8D9 /* CollectionsViewController.swift in Sources */,
 				4EC256A9237228690010A8D9 /* AppDelegate.swift in Sources */,
