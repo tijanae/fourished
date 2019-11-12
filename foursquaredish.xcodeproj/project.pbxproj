@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		4EC256A9237228690010A8D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC256A8237228690010A8D9 /* AppDelegate.swift */; };
 		4EC256AB237228690010A8D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC256AA237228690010A8D9 /* SceneDelegate.swift */; };
-		4EC256AD237228690010A8D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC256AC237228690010A8D9 /* ViewController.swift */; };
 		4EC256B22372286A0010A8D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EC256B12372286A0010A8D9 /* Assets.xcassets */; };
 		4EC256C02372286A0010A8D9 /* foursquaredishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC256BF2372286A0010A8D9 /* foursquaredishTests.swift */; };
 		4EC256D223722B420010A8D9 /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC256D123722B420010A8D9 /* SearchTabViewController.swift */; };
 		4EC256D423722B560010A8D9 /* CollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC256D323722B560010A8D9 /* CollectionsViewController.swift */; };
 		4EC256D9237238130010A8D9 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC256D8237238130010A8D9 /* Secrets.swift */; };
+		4EC257152374C2860010A8D9 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC257142374C2860010A8D9 /* NetworkHelper.swift */; };
+		4EC257172374C3530010A8D9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC257162374C3530010A8D9 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,6 @@
 		4EC256A5237228690010A8D9 /* foursquaredish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foursquaredish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC256A8237228690010A8D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC256AA237228690010A8D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4EC256AC237228690010A8D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4EC256B12372286A0010A8D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EC256B62372286A0010A8D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EC256BB2372286A0010A8D9 /* foursquaredishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = foursquaredishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +40,8 @@
 		4EC256D123722B420010A8D9 /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
 		4EC256D323722B560010A8D9 /* CollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
 		4EC256D8237238130010A8D9 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		4EC257142374C2860010A8D9 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		4EC257162374C3530010A8D9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,6 @@
 		4EC256A7237228690010A8D9 /* foursquaredish */ = {
 			isa = PBXGroup;
 			children = (
-				4EC256AC237228690010A8D9 /* ViewController.swift */,
 				4EC256CB23722A2E0010A8D9 /* Controllers */,
 				4EC256CD23722AA40010A8D9 /* customCells */,
 				4EC256CE23722AC70010A8D9 /* Models */,
@@ -139,6 +140,7 @@
 		4EC256CF23722AD90010A8D9 /* NetworkHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				4EC257142374C2860010A8D9 /* NetworkHelper.swift */,
 			);
 			path = NetworkHelpers;
 			sourceTree = "<group>";
@@ -146,6 +148,7 @@
 		4EC256D023722B070010A8D9 /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
+				4EC257162374C3530010A8D9 /* Persistence.swift */,
 			);
 			path = Persistance;
 			sourceTree = "<group>";
@@ -259,9 +262,10 @@
 			files = (
 				4EC256D223722B420010A8D9 /* SearchTabViewController.swift in Sources */,
 				4EC256D9237238130010A8D9 /* Secrets.swift in Sources */,
-				4EC256AD237228690010A8D9 /* ViewController.swift in Sources */,
 				4EC256D423722B560010A8D9 /* CollectionsViewController.swift in Sources */,
+				4EC257172374C3530010A8D9 /* Persistence.swift in Sources */,
 				4EC256A9237228690010A8D9 /* AppDelegate.swift in Sources */,
+				4EC257152374C2860010A8D9 /* NetworkHelper.swift in Sources */,
 				4EC256AB237228690010A8D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

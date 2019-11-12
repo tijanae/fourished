@@ -56,6 +56,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let firstvc = SearchTabViewController()
         let secondvc = CollectionsViewController()
        
+       
         firstvc.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         secondvc.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
         
