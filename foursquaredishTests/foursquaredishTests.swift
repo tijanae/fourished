@@ -11,24 +11,22 @@ import XCTest
 
 class foursquaredishTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func testVenueDataFromJSON () {
+        let testBundle = Bundle(for: type(of: self))
+        guard let path = testBundle.path(forResource: "Venue", ofType: "json")
+            else { XCTFail(); return }
+        let url = URL (fileURLWithPath: path)
+        do {
+            let data = try Data(contentsOf: url)
+            guard let venueData = try VenueResult.getVenues(from: data) else {
+                XCTFail(); return}
+            XCTAssert(venueData.count > 0)
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        } catch {
+            XCTFail()
+            print(error)
         }
+        
     }
 
 }
