@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         window?.rootViewController = createMainTabBarController()
         window?.makeKeyAndVisible()
+        
             
         
     }
@@ -55,6 +56,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func createMainTabBarController() -> UITabBarController {
         let firstvc = SearchTabViewController()
         let secondvc = CollectionsViewController()
+        
+        let navigationController = UINavigationController()
        
        
         firstvc.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)

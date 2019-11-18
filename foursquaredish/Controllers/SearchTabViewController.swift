@@ -60,17 +60,39 @@ class SearchTabViewController: UIViewController {
         return cv
     }()
     
+    lazy var resultsList: UIButton = {
+       let venueResults = UIButton()
+        venueResults.setImage(UIImage(named: "list"), for: .normal)
+        venueResults.addTarget(self, action: #selector(pushView(_:)), for: .touchUpInside)
+        return venueResults
+    }()
+    
+    @objc func pushView(_ sender: UIButton){
+        let vc = ResultsViewController()
+        vc.venueResults = self.venues
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    // let vc = ResultsViewC()
+    // vc.whatevervenue = self.resultvenues
+    // self.navcontro.pushview(vc)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        setUpView()
         setUpDelegates()
         addSubViews()
         contraints()
         locationAuthorization()
       
         // Do any additional setup after loading the view.
+    }
+    
+    private func setUpView(){
+        self.navigationItem.title = "Four Squaredish"
+        view.backgroundColor = .white
     }
     
     
@@ -127,7 +149,9 @@ class SearchTabViewController: UIViewController {
         view.addSubview(venueSearch)
         view.addSubview(locationSearch)
         view.addSubview(mapView)
+        view.addSubview(resultsList)
         mapView.addSubview(venueCollection)
+        view.addSubview(resultsList)
     
     }
     
@@ -136,6 +160,15 @@ class SearchTabViewController: UIViewController {
         locationViewConstraint()
         mapViewConstraint()
         venueCollectionConstraint()
+        resultListConstraints()
+    }
+    
+    private func resultListConstraints() {
+        resultsList.translatesAutoresizingMaskIntoConstraints = false
+        [resultsList.topAnchor.constraint(equalTo: view.topAnchor, constant: 25),
+         resultsList.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 350),
+         resultsList.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+         resultsList.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -770)].forEach{$0.isActive = true}
     }
     
     
@@ -151,7 +184,7 @@ class SearchTabViewController: UIViewController {
         venueSearch.translatesAutoresizingMaskIntoConstraints = false
         [venueSearch.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
          venueSearch.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-         venueSearch.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+         venueSearch.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -75),
          venueSearch.bottomAnchor.constraint(equalTo: view.topAnchor, constant: 110)].forEach{$0.isActive = true}
         
        
